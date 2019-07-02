@@ -10,7 +10,24 @@
 </head>
 
 <body>
-    
+    <div class='container'>
+        <br>
+        <h1>Matched Images</h1>
+        <br>
+        <div style='width:1100px;display:flex; flex-wrap: wrap;'>
+            {% if images %}
+            {% for image in images %}
+
+            <div class='img-uploader' style='height:300px; padding:20px;overflow-y:hidden'>
+                <img style='width:300px;float:left;' src='{{ image.criminal_Img.url }}' alt='image' />
+            </div>
+
+            {% endfor %}
+            {% else %}
+            <p>No documents.</p>
+            {% endif %}
+        </div>
+    </div>
 </body>
 
 </html>
